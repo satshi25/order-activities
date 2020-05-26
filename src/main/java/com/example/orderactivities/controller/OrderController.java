@@ -16,7 +16,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/orders")
-@Validated
 public class OrderController {
 
     @Autowired
