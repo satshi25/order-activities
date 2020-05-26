@@ -12,3 +12,13 @@ services:
       - MYSQL_DATABASE=testdb
     ports:
       - "3600:3306"
+  springboot-app:
+    build: ./
+    expose:
+      - "9800"
+    ports:
+      - 9800:9800
+    environment:
+      WAIT_HOSTS: mysql:3306
+    depends_on:
+      - mysql-dev
