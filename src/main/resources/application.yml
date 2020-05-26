@@ -3,7 +3,7 @@ server:
 
 api:
   url: https://maps.googleapis.com/maps/api/distancematrix/json?
-  key: AIzaSyB1kvAJG6g3PHdlgjk7fl8tLl1YZL1p7Ww
+  key: 
 
 spring:
   datasource:
