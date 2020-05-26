@@ -1,9 +1,20 @@
 package com.example.orderactivities.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "tbl_orders")
 public class OrderEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
+
+    @Column(name="distance")
     private Integer distance;
+
+    @Column(name="status")
     private String status;
 
     public Integer getId() {

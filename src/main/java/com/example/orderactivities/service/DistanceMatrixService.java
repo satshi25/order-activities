@@ -1,8 +1,8 @@
 package com.example.orderactivities.service;
 
 import com.example.orderactivities.config.AppConfig;
-import com.example.orderactivities.entity.DistanceMatrixResponse;
-import com.example.orderactivities.entity.OrderRequest;
+import com.example.orderactivities.dto.DistanceMatrixResponse;
+import com.example.orderactivities.dto.OrderRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class DistanceMatrixService {
                 coordinates.getDestination().get(END_LONGITUDE);
         LOG.info("Formatted origin parameter: {}", origin);
         LOG.info("Formatted destination parameter: {}" , destination);
-        LOG.info("API key from configuration: {}", config.getKey());
+        LOG.info("Invoking Google Maps API.");
 
         HttpHeaders headers = new HttpHeaders();
         headers.set("Accept", MediaType.APPLICATION_JSON_VALUE);

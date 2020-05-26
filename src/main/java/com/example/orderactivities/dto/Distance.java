@@ -1,7 +1,7 @@
-package com.example.orderactivities.entity;
+package com.example.orderactivities.dto;
 
 public class Distance {
-    String text;
+    private String text;
     private Integer value;
 
     public String getText() {

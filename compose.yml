@@ -1,0 +1,7 @@
+mysql-dev:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MY_SQL_DATABASE: testdb

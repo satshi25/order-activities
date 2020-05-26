@@ -1,4 +1,4 @@
-package com.example.orderactivities.entity;
+package com.example.orderactivities.dto;
 
 import com.example.orderactivities.custom.CoordinateConstraint;
 import com.example.orderactivities.custom.StringValueConstraint;

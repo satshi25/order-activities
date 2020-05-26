@@ -1,4 +1,4 @@
-package com.example.orderactivities.entity;
+package com.example.orderactivities.dto;
 
 import com.google.gson.annotations.SerializedName;
 

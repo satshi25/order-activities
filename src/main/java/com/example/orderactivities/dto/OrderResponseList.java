@@ -1,4 +1,4 @@
-package com.example.orderactivities.entity;
+package com.example.orderactivities.dto;
 
 import java.util.List;
 

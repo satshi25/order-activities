@@ -1,14 +1,13 @@
 package com.example.orderactivities;
 
 import com.example.orderactivities.config.AppConfig;
-import com.example.orderactivities.entity.DistanceMatrixResponse;
-import com.example.orderactivities.entity.OrderRequest;
+import com.example.orderactivities.dto.DistanceMatrixResponse;
+import com.example.orderactivities.dto.OrderRequest;
 import com.example.orderactivities.service.DistanceMatrixService;
 import com.example.orderactivities.service.OrderService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.slf4j.Logger;
@@ -18,7 +17,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.test.web.servlet.MockMvc;
@@ -31,17 +29,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @WebMvcTest
-@ExtendWith(SpringExtension.class)
-@EnableConfigurationProperties(value = AppConfig.class)
 public class CreateOderTests {
 
 	private static final Logger LOG = LoggerFactory.getLogger(CreateOderTests.class);
 
 	@Autowired
 	MockMvc mockMvc;
-
-	@Autowired
-	AppConfig config;
 
 	@MockBean
 	OrderService orderService;
@@ -117,7 +110,7 @@ public class CreateOderTests {
 
 		AppConfig mockConfig = Mockito.mock(AppConfig.class);
 		Mockito.when(mockConfig.getUrl()).thenReturn("https://maps.googleapis.com/maps/api/distancematrix/json?");
-		Mockito.when(mockConfig.getKey()).thenReturn("");
+		Mockito.when(mockConfig.getKey()).thenReturn("AIzaSyB1kvAJG6g3PHdlgjk7fl8tLl1YZL1p7Ww");
 		ReflectionTestUtils.setField(distanceService, "config", mockConfig);
 
 		DistanceMatrixResponse result = distanceService.getDistance(sampleCoordinates);
