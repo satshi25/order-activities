@@ -21,4 +21,4 @@ services:
     environment:
       WAIT_HOSTS: mysql:3306
     depends_on:
-      - mysql-dev
+    - mysql-dev

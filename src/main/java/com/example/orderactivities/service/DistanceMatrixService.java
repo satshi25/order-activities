@@ -47,7 +47,7 @@ public class DistanceMatrixService {
 
         ResponseEntity<DistanceMatrixResponse> response = restTemplate
                 .exchange(uriBuilder.toUriString(), HttpMethod.GET,entity,DistanceMatrixResponse.class);
-
+        LOG.info("API response: {}", response.getBody());
         return response.getBody();
     }
 }

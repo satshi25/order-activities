@@ -12,4 +12,4 @@ spring:
     password  : test
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
